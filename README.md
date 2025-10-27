@@ -58,7 +58,7 @@ Repository Organization
 | `Toggle-with-1PS-mean-field.py` | Mean-field ODE model where only one transcription factor (X) undergoes phase separation, forming dilute and dense subpopulations. Captures how compartmentalization alters bistability. |
 | `Toggle-with-1PS-simulation.py` | Gillespie simulation of the toggle switch with phase separation of one TF. Quantifies switching noise, dwell times, and occupancy probabilities. |
 | `Toggle-with-2PS-mean-field.py` | Mean-field ODE model where oboth TFs (X and Y)) undergoes phase separation, forming dilute and dense subpopulations. Captures how compartmentalization alters bistability. |
-| `Toggle-with-2PS-simulation.py` | Stochastic simulation where both TFs (X and Y) can phase separate. Performs a parameter sweep over phase-separation thresholds (φ*_X, φ*_Y) to compute mean, variance, Fano factor, and CV for both stable states. |
+| `Toggle-with-2PS-simulation.py` | Stochastic simulation where both TFs (X and Y) can phase separate. Performs a parameter sweep over phase-separation thresholds (x*, y*) to compute mean, variance, Fano factor, and CV for both stable states. |
 
 ---
 
@@ -66,11 +66,11 @@ Repository Organization
 | Script | Description |
 |--------|--------------|
 | `Repressilator-with-1PS-mean-field.py` | Mean-field ODE model where only Z undergoes phase separation. Tracks time evolution of (x, y, z_dilt) and exports data as `repressilator_phsp_z_40.csv`. |
-| `Repressilator-with-1PS-simulation.py` | Gillespie simulation of the repressilator with one phase-separating TF (Z). Calculates amplitude and period statistics across varying thresholds n*_Z. |
+| `Repressilator-with-1PS-simulation.py` | Gillespie simulation of the repressilator with one phase-separating TF (Z). Calculates amplitude and period statistics across varying thresholds z*. |
 | `Repressilator-with-2PS-mean-field.py` | Mean-field ODE model with phase separation of Y and Z. Incorporates diffusion-mediated exchange between dilute and dense phases. Exports `repressilator_phsp_y_80_z_40.csv`. |
 | `Repressilator-with-2PS-simulation.py` | Gillespie simulation where Y and Z undergo phase separation. Quantifies mean, variance, and CV of oscillation amplitude and period. |
 | `Repressilator-with-3PS-mean-field.py` | Mean-field model where all three TFs (X, Y, Z) phase separate. Tracks coupled ODEs for dilute and dense components and exports time evolution data. |
-| `Repressilator-with-3PS-simulation.py` | Gillespie simulation for three-phase repressilator (X, Y, Z). Analyzes joint effects of (n*_X, n*_Y, n*_Z) on oscillation coherence and variability. |
+| `Repressilator-with-3PS-simulation.py` | Gillespie simulation for three-phase repressilator (X, Y, Z). Analyzes joint effects of (x*, y*, z*) on oscillation coherence and variability. |
 
 ---
 
