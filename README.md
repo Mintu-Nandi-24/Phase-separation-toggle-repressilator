@@ -1,24 +1,22 @@
-Title: Phase separation as a tunable regulator of canonical gene regulatory motifs
-===================================
+# Title: Phase separation as a tunable regulator of canonical gene regulatory motifs
 
+**Authors:**  
+Priya Chakraborty†  
+The Institute of Mathematical Sciences, CIT Campus, Taramani,  
+Chennai 600113, India  
 
-Authors:
-    Priya Chakraborty†  
-        The Institute of Mathematical Sciences, CIT Campus, Taramani,  
-        Chennai 600113, India  
+Mintu Nandi*,†  
+Universal Biology Institute, The University of Tokyo,  
+7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan  
 
-    Mintu Nandi*,†  
-        Universal Biology Institute, The University of Tokyo,  
-        7-3-1 Hongo, Bunkyo-ku, Tokyo 113-0033, Japan  
+Sandeep Choubey*  
+The Institute of Mathematical Sciences, CIT Campus, Taramani,  
+Chennai 600113, India  
+Homi Bhabha National Institute, Training School Complex,  
+Anushaktinagar, Mumbai 400094, India  
 
-    Sandeep Choubey*  
-        The Institute of Mathematical Sciences, CIT Campus, Taramani,  
-        Chennai 600113, India  
-        Homi Bhabha National Institute, Training School Complex,  
-        Anushaktinagar, Mumbai 400094, India  
-
-* Corresponding authors — mintunandi@ubi.s.u-tokyo.ac.jp, sandeep@imsc.res.in  
-† Equal contributions  
+*Corresponding authors:* [mintunandi@ubi.s.u-tokyo.ac.jp](mailto:mintunandi@ubi.s.u-tokyo.ac.jp), [sandeep@imsc.res.in](mailto:sandeep@imsc.res.in)  
+† Equal contributions
 
 -------------------------------------------------------------------------------
 Overview
