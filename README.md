@@ -72,6 +72,23 @@ Repository Organization
 | `Repressilator-with-3PS-mean-field.py` | Mean-field model where all three TFs (X, Y, Z) phase separate. Tracks coupled ODEs for dilute and dense components and exports time evolution data. |
 | `Repressilator-with-3PS-simulation.py` | Gillespie simulation for three-phase repressilator (X, Y, Z). Analyzes joint effects of (x*, y*, z*) on oscillation coherence and variability. |
 
+### 5. Fractional basin size calcaultion
+| `Basin-size-Y-PS.py` | `Basin-size-XY-PS.py` |
+
+### 6. Bifurcation diagrams
+| Script | Description |
+|--------|--------------|
+| `saddle-node-bifurcation-no-PS.py` | Canonical toggle |
+| `saddle-node-bifurcation-Y-PS.py` | Y-phase separated toggle |
+| `saddle-node-bifurcation-XY-PS.py` | X and Y-phase-separated toggle |
+| `Repressilator_Hopf_no_PS.m` | Canonical repressilator |
+| `Repressilator_Hopf_Z_PS.m` | Z-phase-separated repressilator |
+| `Repressilator_Hopf_YZ_PS.m` | Y and Z-phase-separated repressilator |
+| `Repressilator_Hopf_XYZ_PS.m` | All TF-phase-separated repressilator |
+
+### 5. Fractional basin size calcaultion
+| `sensitivity-analysis.py` | Sensitivity of CV of amplitude and period for peak estimating parameters|
+
 ---
 
 -------------------------------------------------------------------------------
