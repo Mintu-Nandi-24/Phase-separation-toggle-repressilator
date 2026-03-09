@@ -86,7 +86,7 @@ Repository Organization
 | `Repressilator_Hopf_YZ_PS.m` | Y and Z-phase-separated repressilator |
 | `Repressilator_Hopf_XYZ_PS.m` | All TF-phase-separated repressilator |
 
-### 5. Fractional basin size calcaultion
+### 7. Fractional basin size calcaultion
 | `sensitivity-analysis.py` | Sensitivity of CV of amplitude and period for peak estimating parameters|
 
 ---
