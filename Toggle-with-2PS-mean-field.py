@@ -211,7 +211,7 @@ def dymdt(yp, ym):
 def vector_field(X):
     xp, yp = X
     xm = calculate_xm(xp)
-    ym = calculate_xm(yp)
+    ym = calculate_ym(yp)
     return [dxpdt(xp, yp, xm), dypdt(xp, yp, ym)]
 
 

@@ -53,11 +53,15 @@ Each file contains statistics for the low and high states across φ* combination
 
 import numpy as np
 
+# Random seed
+np.random.seed(0)
+
+
 #Toggle switch with phase separation in both TF. 
 # ==============================
 # Parameter sweep setup
 # ==============================
-phi_star_values = [0.00085, 0.0008, 0.00075, 0.0007, 0.00065, 0.0006, 0.00055, 0.0005]
+phi_star_values = [0.00085, 0.0008, 0.00075, 0.0007, 0.00065, 0.0006, 0.00055]
 thresh = 38.2
 kB = 1.38e-23
 T = 305

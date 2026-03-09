@@ -63,6 +63,10 @@ import numpy as np
 # import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
 
+# Random seed
+np.random.seed(0)
+
+
 # ======================================================
 # 1. Define amplitude/period detection function
 # ======================================================
@@ -264,7 +268,7 @@ period_cv_y = []
 period_data_z = []
 period_cv_z = []
 
-n_list = [80, 85, 90, 95, 100, 105, 110, 115, 120, 125, 130]
+n_list = [85, 90, 95, 100, 105, 110, 115, 120]
 
 index = 0
 

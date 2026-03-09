@@ -47,6 +47,9 @@ Outputs:
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Random seed
+np.random.seed(0)
+
 # Define constants
 alpha_x, alpha_y, alpha_z = 5, 5, 5               #Synthesis rate constant
 n= 3                                              #Cooperativity

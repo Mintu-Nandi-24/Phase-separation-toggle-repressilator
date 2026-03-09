@@ -46,6 +46,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
+# Random seed
+np.random.seed(0)
+
+
 # Parameters
 
 alpha_x, alpha_y = 5, 5           # Synthesis rate
