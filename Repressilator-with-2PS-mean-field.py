@@ -140,7 +140,7 @@ def repressilator_phase_sep(t, y):
         if y_dilt >= y_star or y_dens > 0:
             deltaF_y = free_energy_y(y_dilt + 1, y_bar) - free_energy_y(y_dilt, y_bar)        #change in free energy function
             k_in_y = (6 * D * y_dilt) / ((Vtot - v * y_dens)**(2./3.))                        #Dilute to droplet transfer of y
-            k_out_y = k_in_y * np.exp(-deltaF_y / thermal_energy) if y_dens > 0 else 0.0      #Droplet to dilute transfer of y
+            k_out_y = ((6 * D * (y_dilt+1)) / ((Vtot - v * (y_dens-1))**(2./3.))) * np.exp(-deltaF_y / thermal_energy) if y_dens > 0 else 0.0      #Droplet to dilute transfer of y
         else:
             k_in_y, k_out_y = 0, 0
 
@@ -148,7 +148,7 @@ def repressilator_phase_sep(t, y):
         if z_dilt >= z_star or z_dens > 0:
             deltaF_z = free_energy_z(z_dilt + 1, z_bar) - free_energy_z(z_dilt, z_bar)       #change in free energy function
             k_in_z = (6 * D * z_dilt) / ((Vtot - v * z_dens)**(2./3.))                       #Dilute to droplet transfer in z
-            k_out_z = k_in_z * np.exp(-deltaF_z / thermal_energy) if z_dens > 0 else 0.0     #Droplet to dilute transfer in z
+            k_out_z = ((6 * D * (z_dilt+1)) / ((Vtot - v * (z_dens-1))**(2./3.))) * np.exp(-deltaF_z / thermal_energy) if z_dens > 0 else 0.0     #Droplet to dilute transfer in z
         else:
             k_in_z, k_out_z = 0, 0
 

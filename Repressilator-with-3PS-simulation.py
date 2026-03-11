@@ -180,13 +180,13 @@ def run_simulation(n_star_x, n_star_y, n_star_z):
 
         # Phase separation kinetics
         k_in_x = (6. * D_x * x_dilt) / ((Vtot - v * x_dens) ** (2. / 3.)) if x_dilt > n_star_x else 0
-        k_out_x = k_in_x * np.exp(-dG_x / thermal_energy) if x_dens > 0 else 0
+        k_out_x = ((6. * D_x * (x_dilt+1)) / ((Vtot - v * (x_dens-1)) ** (2. / 3.))) * np.exp(-dG_x / thermal_energy) if x_dens > 0 else 0
 
         k_in_y = (6. * D_y * y_dilt) / ((Vtot - v * y_dens) ** (2. / 3.)) if y_dilt > n_star_y else 0
-        k_out_y = k_in_y * np.exp(-dG_y / thermal_energy) if y_dens > 0 else 0
+        k_out_y = ((6. * D_y * (y_dilt+1)) / ((Vtot - v * (y_dens-1)) ** (2. / 3.))) * np.exp(-dG_y / thermal_energy) if y_dens > 0 else 0
 
         k_in_z = (6. * D_z * z_dilt) / ((Vtot - v * z_dens) ** (2. / 3.)) if z_dilt > n_star_z else 0
-        k_out_z = k_in_z * np.exp(-dG_z / thermal_energy) if z_dens > 0 else 0
+        k_out_z = ((6. * D_z * (z_dilt+1)) / ((Vtot - v * (z_dens-1)) ** (2. / 3.))) * np.exp(-dG_z / thermal_energy) if z_dens > 0 else 0
 
         # Reactions
         a1 = a_x / (b_x + (z_dilt / kzx) ** n); a2 = c_x * x_dilt

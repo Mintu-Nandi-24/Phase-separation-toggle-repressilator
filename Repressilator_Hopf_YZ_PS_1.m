@@ -580,7 +580,7 @@ function dydt = repressilator_rhs_YZ_only(~, y, p)
         k_in_y = (6 * p.D * y_dilt) / ((p.Vtot - p.v * y_dens)^(2/3) + eps);
         
         if y_dens > 0
-            k_out_y = k_in_y * exp(-deltaF_y / p.thermal_energy);
+            k_out_y = ((6 * p.D * (y_dilt+1)) / ((p.Vtot - p.v * (y_dens-1))^(2/3) + eps)) * exp(-deltaF_y / p.thermal_energy);
         end
     end
 
@@ -592,7 +592,7 @@ function dydt = repressilator_rhs_YZ_only(~, y, p)
         k_in_z = (6 * p.D * z_dilt) / ((p.Vtot - p.v * z_dens)^(2/3) + eps);
         
         if z_dens > 0
-            k_out_z = k_in_z * exp(-deltaF_z / p.thermal_energy);
+            k_out_z = ((6 * p.D * (z_dilt+1)) / ((p.Vtot - p.v * (z_dens-1))^(2/3) + eps)) * exp(-deltaF_z / p.thermal_energy);
         end
     end
 

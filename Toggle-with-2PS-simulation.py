@@ -151,11 +151,11 @@ def run_simulation(phi_star_x, phi_star_y, thresh=38.2):
         else:                                                                                  #when TFs phase separates
             dF_x = free_energy_x(x_dilt + 1, x_bar) - free_energy_x(x_dilt, x_bar)
             k_in_x = (6. * D * x_dilt) / ((Vtot - v * x_dens)**(2. / 3.)) if x_dilt > x_star else 0            #Diffusion limited transport from x dilute to droplet phase
-            k_out_x = k_in_x * np.exp(-dF_x / thermal_energy) if x_dens > 0 else 0
+            k_out_x = ((6. * D * (x_dilt+1)) / ((Vtot - v * (x_dens-1))**(2. / 3.))) * np.exp(-dF_x / thermal_energy) if x_dens > 0 else 0
 
             dF_y = free_energy_y(y_dilt + 1, y_bar) - free_energy_y(y_dilt, y_bar)
             k_in_y = (6. * D * y_dilt) / ((Vtot - v * y_dens)**(2. / 3.)) if y_dilt > y_star else 0           # diffusion limited transport from y dilute to droplet phase
-            k_out_y = k_in_y * np.exp(-dF_y / thermal_energy) if y_dens > 0 else 0
+            k_out_y = ((6. * D * (y_dilt+1)) / ((Vtot - v * (y_dens-1))**(2. / 3.))) * np.exp(-dF_y / thermal_energy) if y_dens > 0 else 0
 
             a1 = alpha_x / (1 + (y_dilt / kxy) ** n)
             a2 = b_x * x_dilt

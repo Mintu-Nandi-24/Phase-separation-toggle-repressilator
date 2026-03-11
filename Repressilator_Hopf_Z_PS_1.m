@@ -572,7 +572,7 @@ function dydt = repressilator_rhs_Z_only(~, y, p)
         k_in_z = (6 * p.D * z_dilt) / ((p.Vtot - p.v * z_dens)^(2/3) + eps);
         
         if z_dens > 0
-            k_out_z = k_in_z * exp(-deltaF_z / p.thermal_energy);
+            k_out_z = ((6 * p.D * (z_dilt+1)) / ((p.Vtot - p.v * (z_dens-1))^(2/3) + eps)) * exp(-deltaF_z / p.thermal_energy);
         end
     end
 

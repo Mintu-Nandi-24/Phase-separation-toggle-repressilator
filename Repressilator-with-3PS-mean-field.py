@@ -127,7 +127,7 @@ def repressilator_phase_sep(t, y):
         if x_dilt >= x_star or x_dens > 0:
             deltaF_x = free_energy_x(x_dilt + 1, x_bar) - free_energy_x(x_dilt, x_bar)           #change in free energy for x
             k_in_x = (6 * D * x_dilt) / ((Vtot - v * x_dens)**(2./3.))                           #Dilute to droplet transfer in x
-            k_out_x = k_in_x * np.exp(-deltaF_x / thermal_energy) if x_dens > 0 else 0.0         #Droplet to dilute tranfer in x
+            k_out_x = ((6 * D * (x_dilt+1)) / ((Vtot - v * (x_dens-1))**(2./3.))) * np.exp(-deltaF_x / thermal_energy) if x_dens > 0 else 0.0         #Droplet to dilute tranfer in x
         else:
             k_in_x, k_out_x = 0, 0                                                               #no dilute to droplet transfer in x if the threshold is not exceeded
 
@@ -136,7 +136,7 @@ def repressilator_phase_sep(t, y):
         if y_dilt >= y_star or y_dens > 0:
             deltaF_y = free_energy_y(y_dilt + 1, y_bar) - free_energy_y(y_dilt, y_bar)           #change in free energy for y
             k_in_y = (6 * D * y_dilt) / ((Vtot - v * y_dens)**(2./3.))                           #Dilute to droplet transfer in y
-            k_out_y = k_in_y * np.exp(-deltaF_y / thermal_energy) if y_dens > 0 else 0.0         #Droplet to dilute transfer in y
+            k_out_y = ((6 * D * (y_dilt+1)) / ((Vtot - v * (y_dens-1))**(2./3.))) * np.exp(-deltaF_y / thermal_energy) if y_dens > 0 else 0.0         #Droplet to dilute transfer in y
         else:
             k_in_y, k_out_y = 0, 0
 
@@ -144,7 +144,7 @@ def repressilator_phase_sep(t, y):
         if z_dilt >= z_star or z_dens > 0:
             deltaF_z = free_energy_z(z_dilt + 1, z_bar) - free_energy_z(z_dilt, z_bar)          #change in free energy for z
             k_in_z = (6 * D * z_dilt) / ((Vtot - v * z_dens)**(2./3.))                          #Dilute to droplet transfer in z
-            k_out_z = k_in_z * np.exp(-deltaF_z / thermal_energy) if z_dens > 0 else 0.0        #Droplet to dilute tranfer in z
+            k_out_z = ((6 * D * (z_dilt+1)) / ((Vtot - v * (z_dens-1))**(2./3.))) * np.exp(-deltaF_z / thermal_energy) if z_dens > 0 else 0.0        #Droplet to dilute tranfer in z
         else:
             k_in_z, k_out_z = 0, 0
 

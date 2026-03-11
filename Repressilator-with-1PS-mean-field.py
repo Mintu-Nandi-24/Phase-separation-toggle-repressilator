@@ -116,7 +116,7 @@ def repressilator_with_phase_sep(t, y):
 
         # Phase separation rates
         k_in = (6. * D * z_dilt) / ((Vtot - v * z_dens)**(2. / 3.))                                   #Dilute to droplet tranfer in z
-        k_out = k_in * np.exp(-delta_F / thermal_energy) if z_dens > 0 else 0.0                       #Droplet to dilute transfer in z
+        k_out = ((6. * D * (z_dilt+1)) / ((Vtot - v * (z_dens-1))**(2. / 3.))) * np.exp(-delta_F / thermal_energy) if z_dens > 0 else 0.0                       #Droplet to dilute transfer in z
         # Core repression dynamics
         dxdt = alpha_x / (1 + (z_dilt / K_zx)**n) - b_x * x
         dydt = alpha_y / (1 + (x / K_xy)**n) - b_y * y_

@@ -176,7 +176,7 @@ def run_simulation(n_star_z):
 
         # Phase separation kinetics
         k_in_z = (6. * D_z * z_dilt) / ((Vtot - v * z_dens) ** (2. / 3.)) if z_dilt > n_star_z else 0
-        k_out_z = k_in_z * np.exp(-dG_z / thermal_energy) if z_dens > 0 else 0
+        k_out_z = ((6. * D_z * (z_dilt+1)) / ((Vtot - v * (z_dens-1)) ** (2. / 3.))) * np.exp(-dG_z / thermal_energy) if z_dens > 0 else 0
 
         # Reactions
         a1 = a_x / (b_x + (z_dilt / kzx) ** n); a2 = c_x * x
